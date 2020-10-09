@@ -8,13 +8,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{{#block "title"}} Welcome to Course Ideas {{/block}}</title>
         <link rel="stylesheet" href="/css/main.css">
-    </head>
-{{/block}}
+</head>
 <body>
     <div class="page">
-{{#block "content"}}
-
+        {{#if flashMessage}}
+            <p id="flash-message">{{ flashMessage }}</p>
+        {{/if}}
 {{/block}}
+{{#block "content"}}{{/block}}
 {{#block "footer"}}
     </div>
   </body>

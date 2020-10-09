@@ -26,6 +26,6 @@ public class SimpleCourseIdeaDAO implements CourseIdeaDAO {
         return ideas.stream()
                 .filter(idea -> idea.getSlug().equals(slug))
                 .findFirst()
-                .orElseThrow(NoFoundException::new);
+                .orElseThrow(NotFoundException::new);
     }
 }
